@@ -1,4 +1,4 @@
-package ku.pvm.pvmskaiciuokle;
+package ku.pvmskaiciuokle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
