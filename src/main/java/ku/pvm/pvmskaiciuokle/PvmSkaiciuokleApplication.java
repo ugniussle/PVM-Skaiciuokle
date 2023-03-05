@@ -1,13 +1,13 @@
-package ku.pvm.pmvskaiciuokle;
+package ku.pvm.pvmskaiciuokle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PmvSkaiciuokleApplication {
+public class PvmSkaiciuokleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(PmvSkaiciuokleApplication.class, args);
+        SpringApplication.run(PvmSkaiciuokleApplication.class, args);
     }
 
 }

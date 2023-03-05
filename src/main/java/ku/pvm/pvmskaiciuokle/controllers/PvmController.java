@@ -1,4 +1,4 @@
-package ku.pvm.pmvskaiciuokle.controllers;
+package ku.pvm.pvmskaiciuokle.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
