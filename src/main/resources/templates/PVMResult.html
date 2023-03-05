@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title th:text="${title}"></title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+</head>
+<body class="bg-red-200">
+<h1 th:text="${title}" class="text-center mt-6 pb-6 text-2xl font-black text-gray-700 shadow-lg shadow-red-400/50 border-b border-red-300">
+
+</h1>
+
+<span>
+    <?--  class="mt-5 inline-block w-full mx-auto"  ?>
+    <svg class="mt-5 inline-block w-full mx-auto" fill="#3d3846" width="180px" height="180px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg" stroke="#3d3846" stroke-width="0.00032"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style> .cls-1 { fill: none; } </style> </defs> <rect x="13.9999" y="23" width="8" height="2"></rect> <rect x="9.9999" y="23" width="2" height="2"></rect> <rect x="13.9999" y="18" width="8" height="2"></rect> <rect x="9.9999" y="18" width="2" height="2"></rect> <rect x="13.9999" y="13" width="8" height="2"></rect> <rect x="9.9999" y="13" width="2" height="2"></rect> <path d="M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z" transform="translate(0 0)"></path> <rect id="_Transparent_Rectangle_" data-name="<Transparent Rectangle>" class="cls-1" width="32" height="32"></rect> </g></svg>
+</span>
+
+<div class="w-11/12 sm:w-10/12 md:w-8/12 lg:w-5/12 mt-6 p-6 mx-auto bg-orange-200 rounded-xl border-4 border-red-500 shadow-2xl shadow-red-400/80 ring ring-red-700">
+
+    <div class="grid grid-flow-row grid-rows-max gap-4 text-center grid-cols-2 xl:grid-cols-3">
+        <div class="rounded-md p-2 transition duration-300 hover:bg-orange-400 hover:ring-red-500 hover:ring-2">
+            <h2>Vieneto kaina su PVM</h2>
+            <div th:text="${singlePriceWithPVM}"></div>
+        </div>
+        <div class="rounded-md p-2 transition duration-300 hover:bg-orange-400 hover:ring-red-500 hover:ring-2">
+            <h2>Vieneto kaina be PVM</h2>
+            <div th:text="${singlePriceNoPVM}"></div>
+        </div>
+        <div class="rounded-md p-2 transition duration-300 hover:bg-orange-400 hover:ring-red-500 hover:ring-2">
+            <h2>Vieneto PVM kaina</h2>
+            <div th:text="${PVMofItem}"></div>
+        </div>
+
+        <div class="rounded-md p-2 transition duration-300 hover:bg-orange-400 hover:ring-red-500 hover:ring-2">
+            <h2>Visa kaina su PVM</h2>
+            <div th:text="${totalPriceWithPVM}"></div>
+        </div>
+        <div class="rounded-md p-2 transition duration-300 hover:bg-orange-400 hover:ring-red-500 hover:ring-2">
+            <h2>Visa kaina be PVM</h2>
+            <div th:text="${totalPriceNoPVM}"></div>
+        </div>
+        <div class="rounded-md p-2 transition duration-300 hover:bg-orange-400 hover:ring-red-500 hover:ring-2">
+            <h2>Visa PVM kaina</h2>
+            <div th:text="${totalPVM}"></div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
