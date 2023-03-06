@@ -28,14 +28,14 @@ public class PvmController {
     ) {
         model.addAttribute("title", "PVM Rezultatai");
 
-        Map<String, Double> results = new HashMap<>();
+        Map<String, String> results = new HashMap<>();
 
-        results.put("singlePriceWithPVM",   round(singlePriceWithPVM, 2));
-        results.put("singlePriceNoPVM",     round(singlePriceWithPVM * (1 - PVMRate), 2));
-        results.put("PVMofItem",            round(singlePriceWithPVM * PVMRate, 2));
-        results.put("totalPriceNoPVM",      round(results.get("singlePriceNoPVM") * itemCount, 2));
-        results.put("totalPVM",             round(results.get("PVMofItem") * itemCount, 2));
-        results.put("totalPriceWithPVM", results.get("totalPriceNoPVM") + results.get("totalPVM"));
+        results.put("singlePriceWithPVM",   "" + round(singlePriceWithPVM) +                                "€");
+        results.put("singlePriceNoPVM",     "" + round(singlePriceWithPVM * (1 - PVMRate)) +                "€");
+        results.put("PVMofItem",            "" + round(singlePriceWithPVM * PVMRate) +                      "€");
+        results.put("totalPriceNoPVM",      "" + round(singlePriceWithPVM * (1 - PVMRate) * itemCount) +    "€");
+        results.put("totalPVM",             "" + round(singlePriceWithPVM * PVMRate * itemCount) +          "€");
+        results.put("totalPriceWithPVM",    "" + round(singlePriceWithPVM * itemCount) +                    "€");
 
         model.addAttribute("itemCount", itemCount);
         model.addAllAttributes(results);
@@ -52,5 +52,9 @@ public class PvmController {
         }
 
         return Math.round(number*n)/n;
+    }
+
+    private Double round(Double number) {
+        return round(number, 2);
     }
 }
